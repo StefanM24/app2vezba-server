@@ -2,6 +2,8 @@ import express from 'express';
 
 import { signup, login, isAuth } from '../controllers/auth.js';
 
+import { h1 } from '../routes/index.html';
+
 const router = express.Router();
 
 router.post('/login', login);
@@ -16,7 +18,7 @@ router.get('/public', (req, res, next) => {
 
 // will match any other path
 router.use('/', (req, res, next) => {
-    res.status(404).json("Dobrodosli na prvu stranicu!!");
+    res.status(404).json({ h1 });
 });
 
 export default router;
