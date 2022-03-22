@@ -16,7 +16,7 @@ router.get('/public', (req, res, next) => {
 
 // will match any other path
 router.use('/', (req, res, next) => {
-    res.status(404).json({error : "Dobrodosli na prvu stranicu!!"});
+    res.status(404).json("Dobrodosli na prvu stranicu!!");
 });
 
 export default router;
