@@ -4,11 +4,11 @@ import { signup, login, isAuth } from '../controllers/auth.js';
 
 const router = express.Router();
 
-router.post('login', login);
+router.post('/login', login);
 
-router.post('signup', signup);
+router.post('/signup', signup);
 
-router.get('private', isAuth);
+router.get('/private', isAuth);
 
 router.get('/', (req, res, next) => {
     res.status(200).json({ message: "here is your public resource" });
