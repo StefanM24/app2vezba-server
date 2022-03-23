@@ -10,7 +10,7 @@ router.post('/signup', signup);
 
 router.get('/private', isAuth);
 
-router.get('/public', (req, res, next) => {
+router.get('/', (req, res, next) => {
     res.status(200).json({ message: "here is your public resource" });
 });
 
